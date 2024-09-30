@@ -16,7 +16,7 @@
             </p>
             <p>
                 <label for="inumero">Numero do Cartão:</label>
-                    <input type="number" name="numero" id="inumero" placeholder="Apenas Números" required oninput="this.value = this.value.slice(0,12)">
+                    <input type="number" name="numero" id="inumero" placeholder="Apenas Números" required oninput="this.value = this.value.slice(0,16)">
             </p>
             <p>
                 <label for="imes">Data de Expiração - Mês/Ano</label>
@@ -27,7 +27,7 @@
                     <input type="text" name="numero" id="icvv" required minlength="3" maxlength="3" placeholder="Verso do Cartão">
             </p>
             <p>
-                    <button onclick="alert('Você está Protegido, PARABENS!!!')">Enviar</button>
+                    <button onclick="/*alert*/('Você está Protegido, PARABENS!!!')">Enviar</button>
                     <input type="reset" value="Limpar dados">
             </p>
         </form>  
