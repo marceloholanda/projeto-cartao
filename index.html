@@ -16,7 +16,7 @@
             </p>
             <p>
                 <label for="inumero">Numero do Cartão:</label>
-                    <input type="number" name="numero" id="inumero" placeholder="Apenas Números" required oninput="this.value = this.value.slice(0,16)">
+                    <input type="text" name="numero" id="inumero" required  maxlength="16" placeholder="Apenas Números" pattern="\d{16,}" oninput="this.value = this.value.replace(/[^0-9]/g,'')">
             </p>
             <p>
                 <label for="imes">Data de Expiração - Mês/Ano</label>
@@ -24,7 +24,7 @@
             </p>
             <p>
                 <label for="icvv">CVV</label>
-                    <input type="text" name="numero" id="icvv" required minlength="3" maxlength="3" placeholder="Verso do Cartão">
+                    <input type="text" name="numero" id="icvv" required maxlength="3" required placeholder="Verso do Cartão" pattern="\d{3,}" oninput="this.value = this.value.replace(/[^0-9]/g,'')">
             </p>
             <p>
                     <button onclick="/*alert*/('Você está Protegido, PARABENS!!!')">Enviar</button>
