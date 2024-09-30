@@ -16,7 +16,7 @@
             </p>
             <p>
                 <label for="inumero">Numero do Cartão:</label>
-                    <input type="tel" name="numero" id="inumero" required minlength="12" maxlength="12" placeholder="Apenas Números">
+                    <input type="number" name="numero" id="inumero" placeholder="Apenas Números" required oninput="this.value = this.value.slice(0,12)">
             </p>
             <p>
                 <label for="imes">Data de Expiração - Mês/Ano</label>
