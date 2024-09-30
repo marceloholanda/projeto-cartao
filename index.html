@@ -9,27 +9,27 @@
 <body>
     <h1>Veja se seu cartão está protegido</h1>
     <img src="6081538.jpg" alt="1px">
-        <form action="cadastro.php" method="get"></form>
+        <form action="cadastro.php" method="post" autocomplete="off">
             <p>
-                Nome do Titular
-                    <input type="text" name="numero" id="numero">
+                <label for="inome">Nome do Titular:</label>
+                    <input type="text" name="nome do titular" id="inome" required minlength="5" placeholder="Frente do Cartão">
             </p>
             <p>
-                Numero do Cartão
-                    <input type="text" name="numero" id="numero">
+                <label for="inumero">Numero do Cartão:</label>
+                    <input type="tel" name="numero" id="inumero" required minlength="12" maxlength="12" placeholder="Apenas Números">
             </p>
             <p>
-                Data de Expiração - Mês/Ano
-                    <input type="month" name="numero" id="numero">
+                <label for="imes">Data de Expiração - Mês/Ano</label>
+                    <input type="month" name="mes" id="imes">
             </p>
             <p>
-                CVV
-                    <input type="text" name="numero" id="numero">
+                <label for="icvv">CVV</label>
+                    <input type="text" name="numero" id="icvv" required minlength="3" maxlength="3" placeholder="Verso do Cartão">
             </p>
             <p>
-                    <button onclick="alert('Você está Protegido, PARABENS!!!')">Enviar</button>
+                    <button onclick="/*ALERT*/('Você está Protegido, PARABENS!!!')">Enviar</button>
+                    <input type="reset" value="Limpar dados">
             </p>
-            
-        </script>
+        </form>  
 </body>
 </html>
