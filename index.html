@@ -9,27 +9,32 @@
 <body>
     <h1>Veja se seu cartão está protegido</h1>
     <img src="6081538.jpg" alt="1px">
-        <form action="cadastro.php" method="post" autocomplete="off">
-            <p>
-                <label for="inome">Nome do Titular:</label>
-                    <input type="text" name="nome do titular" id="inome" required minlength="5" maxlength="30" placeholder="Frente do Cartão">
-            </p>
-            <p>
-                <label for="inumero">Numero do Cartão:</label>
-                    <input type="text" name="numero" id="inumero" required  maxlength="16" placeholder="Apenas Números" pattern="\d{16,}" oninput="this.value = this.value.replace(/[^0-9]/g,'')">
-            </p>
-            <p>
-                <label for="imes">Data de Expiração - Mês/Ano</label>
-                    <input type="month" name="mes" id="imes">
-            </p>
-            <p>
-                <label for="icvv">CVV</label>
-                    <input type="text" name="numero" id="icvv" required maxlength="3" required placeholder="Verso do Cartão" pattern="\d{3,}" oninput="this.value = this.value.replace(/[^0-9]/g,'')">
-            </p>
-            <p>
-                    <button onclick="/*alert*/('Você está Protegido, PARABENS!!!')">Enviar</button>
-                    <input type="reset" value="Limpar dados">
-            </p>
-        </form>  
+        <fieldset>
+            <form action="cadastro.php" method="post" autocomplete="off">
+                <p>
+                    <label for="inome">Nome do Titular:</label>
+                        <input type="text" name="nome do titular" id="inome" required minlength="5" maxlength="30" placeholder="Frente do Cartão">
+                            <script>
+                                document.getElementById("inome").addEventListener("keypress", function(event) { if (!/\D/.test(event.key)){event.preventDefault();}});
+                            </script>
+                </p>
+                <p>
+                    <label for="inumero">Numero do Cartão:</label>
+                        <input type="text" name="numero" id="inumero" required  maxlength="16" placeholder="Apenas Números" pattern="\d{16,}" oninput="this.value = this.value.replace(/[^0-9]/g,'')">
+                </p>
+                <p>
+                    <label for="imes">Data de Expiração - Mês/Ano</label>
+                        <input type="month" name="mes" id="imes">
+                </p>
+                <p>
+                    <label for="icvv">CVV</label>
+                        <input type="text" name="numero" id="icvv" required maxlength="3" required placeholder="Verso do Cartão" pattern="\d{3,}" oninput="this.value = this.value.replace(/[^0-9]/g,'')">
+                </p>
+                <p>
+                        <button onclick="/*alert*/('Você está Protegido, PARABENS!!!')">Enviar</button>
+                        <input type="reset" value="Limpar dados">
+                </p>
+            </form>
+        </fieldset>
 </body>
 </html>
